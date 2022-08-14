@@ -33,8 +33,8 @@
     }
 
     .main-body{
-        height: 600px;
-        width: 500px;
+        height: 100%;
+        width: 60%;
         border-radius: 5%;
         background-color: cornsilk;
         display: flex;
@@ -88,6 +88,7 @@
 
      #done-style{
         margin-top: 5%;
+        margin-bottom: 10%;
         display: flex;
          flex-direction: column; 
         /* width: 300px; */
