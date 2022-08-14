@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Day 6| Assignment</title>
+
+</head>
+<body>
+
+    <h1> Sunset Videos</h1>
+    <div class="video">
+        <div>
+            <video id="video-player" width="90%" height="90%" controls>
+                <source src="./assets/Flow - 6815.mp4" type="video/mp4">
+
+
+                
+            </video>
+        </div>
+        <div class="control">
+            <button id="play" onclick=videoController("playPause")><i class="bi bi-play-btn-fill"></i></button>
+            <button onclick=videoController("reset")>ٌReset</button>
+            <button onclick=videoController("volDown")><i class="bi bi-volume-down-fill"></i>
+            </button>
+            <button onclick=videoController("volUp")><i class="bi bi-volume-up-fill"></i>
+            </i>
+            </button>
+            <button id="prev" onclick=videoController("prev")><i class="bi bi-skip-backward-btn-fill"></i>
+            </i>
+            </button>
+            <button id="next" onclick=videoController("next")><i class="bi bi-skip-forward-btn-fill"></i>
+            </i>
+            </button>
+
+        </div>
+    </div>
+
+    <div class="video-menu">
+        <video width="20%" height="80%" onclick=videoSwitch("Vid1")><source id="source1" src="./assets/Flow - 6815.mp4"> </video>
+
+        <video  width="20%" height="80%" onclick=videoSwitch("Vid2")><source id="source2" src="./assets/Lighthouse - 1917.mp4"> </video>
+
+        <video  width="20%" height="80%" onclick=videoSwitch("Vid3")> <source id="source3" src="./assets/Sea - 49053.mp4"></video>
+
+        <video width="20%" height="80%" onclick=videoSwitch("Vid4")> <source id="source4" src="./assets/Sea - 53127.mp4"></video>
+    </div>
+</body>
+</html>
+
+<script>
+
+
+    var i=1
+    var videoPlay= document.querySelector("#video-player")
+    console.log("#video-player")
+    
+   let vid = new Array()
+     vid[1] =document.querySelector("#source1")
+     vid[2] =document.querySelector("#source2")
+     vid[3] =document.querySelector("#source3")
+     vid[4] =document.querySelector("#source4")
+
+    const videoSwitch = (parameter) => {
+      
+      switch(parameter){
+      case "Vid1":
+            videoPlay.src = vid[1].src
+          break
+      case "Vid2":
+          videoPlay.src = vid[2].src
+
+          break
+        case "Vid3":
+          videoPlay.src = vid[3].src
+
+          break
+        case "Vid4":
+          videoPlay.src = vid[4].src
+
+          break
+      default:
+          break
+      }
+  }
+
+  
+    // ES 6 Arrow FUnction
+    const videoController = (parameter) => {
+        switch(parameter){
+            case "playPause":
+                // if(videoPlay.paused === false)
+                    if(!videoPlay.paused){
+                        videoPlay.pause()
+                    }
+                    else
+                        videoPlay.play()
+                    break
+            case "reset":
+                    videoPlay.currentTime = 0
+                    break 
+            case "volDown":
+                    if(videoPlay.volume > 0.1){
+                    videoPlay.volume -= 0.1
+                
+                    }
+                    break
+            case "volUp":
+                    if(videoPlay.volume <0.9){
+                    videoPlay.volume += 0.1
+                    }
+                    break
+
+            case "next":
+                if(i<4){
+                    i += 1
+                videoPlay.src = vid[i].src
+                }
+                else
+                {
+                    i=1
+                    videoPlay.src = vid[i].src
+                }
+                break
+            case "prev":
+                if(i>0){
+                    i -= 1
+                videoPlay.src = vid[i].src
+                }
+                else
+                {
+                    i=4
+                    videoPlay.src = vid[i].src
+                }
+                
+                break
+            default:
+                    break
+        }
+    }
+
+ 
+</script>
