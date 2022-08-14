@@ -29,12 +29,12 @@
     }
 
     hr{
-        width: 400px;
+        width: 60%;
     }
 
     .main-body{
         height: 100%;
-        width: 60%;
+        width: 40%;
         border-radius: 5%;
         background-color: cornsilk;
         display: flex;
@@ -110,7 +110,7 @@
         }
     
         hr{
-            width: 60%;
+            width: 50%;
         }
         button{
             width: 30%;
