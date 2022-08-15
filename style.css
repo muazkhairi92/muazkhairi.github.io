@@ -304,4 +304,13 @@ margin-bottom: 2%;
     .desc{
         font-size: 150%;
     }
+    .dot{
+        height: 8px;
+        width: 8px;
+    }
+    .edot{
+        height: 8px;
+        width: 8px;
+    }
+
 }
