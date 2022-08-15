@@ -313,5 +313,7 @@ margin-bottom: 2%;
         height: 8px;
         width: 8px;
     }
-
+    .main-container{
+        flex-direction: column;
+    }
 }
