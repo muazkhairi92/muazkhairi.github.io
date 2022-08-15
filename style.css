@@ -55,6 +55,7 @@ img{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding:2% 5% 2% 5%;
     width: 100%;
     position: sticky;
     top: 0;
@@ -209,7 +210,7 @@ img{
   
   .experience-container {
     max-width: 70%;
-    max-height: 60%;
+    max-height: 80%;
     position: relative;
     margin: auto;
     height: 70%;
@@ -218,9 +219,9 @@ img{
     color: midnightblue;
     background-color: gray;
     font-size: 80%;
-    padding: 8px 12px;
+    padding: 6px 10px;
     position: absolute;
-    bottom: 8px;
+    bottom: -5%;
     width: 100%;
     text-align: center;
   }
@@ -283,7 +284,7 @@ margin-bottom: 2%;
 
 @media screen and (max-width:600px){
     body{
-        font-size: 45%;
+        font-size: 50%;
     }
     h1{
         font-size: 400%;
@@ -301,7 +302,9 @@ margin-bottom: 2%;
         height: 30%;
         width: 30%;
     }
-
+    #navbar{
+        font-size: 110%;
+    }
     .desc{
         font-size: 300%;
     }
