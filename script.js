@@ -44,7 +44,7 @@ function EcurrentSlide(n) {
 function EshowSlides(n) {
   let i;
   let slides = document.getElementsByClassName("myExp");
-  let dots = document.getElementsByClassName("Edot");
+  let dots = document.getElementsByClassName("edot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
