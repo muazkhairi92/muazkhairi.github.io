@@ -51,6 +51,7 @@ img{
 #navbar{
     background-color: #002B5B;
     height: 10%;
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
