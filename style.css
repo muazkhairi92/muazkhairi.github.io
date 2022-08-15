@@ -108,6 +108,7 @@ img{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
     /* align-items: center; */
     gap:15%;
     width: 90%;
@@ -306,7 +307,14 @@ margin-bottom: 2%;
         font-size: 110%;
     }
     .desc{
-        font-size: 300%;
+        font-size: 150%;
+    }
+    .desc > p{
+        font-size: 70%;
+    }
+
+    .desc > a{
+        font-size: 160%;
     }
     .dot{
         height: 8px;
