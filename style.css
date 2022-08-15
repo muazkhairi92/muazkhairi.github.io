@@ -26,7 +26,7 @@ h3{
     font-size: 2rem;
 }
 p{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 a{
     all:unset;
@@ -52,6 +52,7 @@ img{
     background-color: #002B5B;
     height: 10%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     position: sticky;
@@ -64,7 +65,7 @@ img{
     gap:10%;
     justify-content: center;
     align-content: center;
-    font-size: 200%;
+    font-size: 150%;
 }
 #hero{
     background-color: #2B4865;
