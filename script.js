@@ -1,12 +1,10 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -36,7 +34,6 @@ function EplusSlides(n) {
   EshowSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function EcurrentSlide(n) {
   EshowSlides(slideIndex = n);
 }
