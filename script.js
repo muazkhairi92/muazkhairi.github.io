@@ -1,5 +1,5 @@
 let slideIndex = 1;
-showSlides(slideIndex);
+showWorks(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -27,7 +27,6 @@ function showSlides(n) {
 
 
 
-let EslideIndex = 1;
 EshowSlides(slideIndex);
 
 function EplusSlides(n) {
