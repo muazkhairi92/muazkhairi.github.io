@@ -1,18 +1,20 @@
+let Eslides = document.getElementsByClassName("myExp");
+let Edots = document.getElementsByClassName("edot");
+let slides = document.getElementsByClassName("myWorks");
+let dots = document.getElementsByClassName("dot");
+
 let slideIndex = 1;
 showWorks(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showWorks(slideIndex += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showWorks(slideIndex = n);
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("myWorks");
-  let dots = document.getElementsByClassName("dot");
+function showWorks(n) {
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -27,28 +29,26 @@ function showSlides(n) {
 
 
 
-EshowSlides(slideIndex);
+showExp(slideIndex);
 
 function EplusSlides(n) {
-  EshowSlides(slideIndex += n);
+  showExp(slideIndex += n);
 }
 
 function EcurrentSlide(n) {
-  EshowSlides(slideIndex = n);
+  showExp(slideIndex = n);
 }
 
-function EshowSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("myExp");
-  let dots = document.getElementsByClassName("edot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+function showExp(n) {
+
+  if (n > Eslides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = Eslides.length}
+  for (i = 0; i < Eslides.length; i++) {
+    Eslides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  for (i = 0; i < Edots.length; i++) {
+    Edots[i].className = Edots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  Eslides[slideIndex-1].style.display = "block";
+  Edots[slideIndex-1].className += " active";
 }
